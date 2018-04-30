@@ -177,3 +177,117 @@ arr = ["a", "b", "c"]
 for x in arr
   puts "Value: #{x}"
 end
+
+// iterador each 
+
+arr = [2, 4, 6]
+sum = 0
+arr.each do |x|
+    sum += x
+end
+
+puts sum
+
+- Otro iterador puede ser con numeros o variables. 
+10.times do
+  puts "Hi"
+end
+
+// Metodos para cadenas
+
+text = "I am learning Ruby and it is fun!"
+text.downcase!
+
+// Nombrar metodos
+def say
+  puts "Hi"
+end
+
+- mezzclar metodos 
+def square(x)
+  x*x
+end
+
+square(4).times {puts "Hi"}
+
+- utilizar metodo como parametro de otro
+
+def add(a, b)
+  a+b
+end
+
+def mult(a, b)
+  a*b
+end
+
+x = mult(add(2, 3), add(4, 7))
+puts x
+# outputs 55
+
+// Variable global
+
+$'name of variable'
+
+// Clases inicializadas 
+
+class Person
+  def initialize
+    puts "Hi there"
+  end
+end
+
+p1 = Person.new
+p2 = Person.new
+
+# Output:
+# "Hi there"
+# "Hi there"
+
+- instanciar clases 
+
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+p1 = Person.new("David")
+p2 = Person.new("Amy")
+
+class Animal
+  @age = 0
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+end
+
+ob = Animal.new("Jacky", 3)
+
+// Getter and Setter
+
+- Agregar automaticamente Get and Set
+attr_accessor :'variable name'
+
+//Accesos de las variables en las clases 
+class Person
+  attr_accessor :name, :age
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+  def change(n, a)
+    self.name = n
+    self.age = a
+  end
+  def show_info
+    puts "#{self.name} is #{self.age}"
+  end
+end
+
+p = Person.new("David", 28)
+p.change("Bob", 42)
+p.show_info
+
+# outputs "Bob is 42"
+
