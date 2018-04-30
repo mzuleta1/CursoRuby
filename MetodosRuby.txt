@@ -1,0 +1,179 @@
+
+// Imprimien una linea de texto a diferencia
+que el puts al finalizar imprime un salto de linea y el print no.
+puts "Hello World"
+print "there"
+
+// Comentarios 
+# Esto es un comentario en una clase, solo permitido para una linea.
+=begin
+   Esto es para un bloque
+   de comentarios.
+=end
+
+// Declaracion de variable e inclusion en un puts o print. 
+age = 42
+puts "He is #{age} years old"
+
+// Pedir datos, la diferencia es que el gets incluye un salto de linea
+y el .chomp la ignora.
+
+x = gets o x = gets.chomp
+puts x
+
+// para los switch se utiliza case. 
+
+case a
+when 1
+  puts "One"
+when 2
+  puts "Two"
+when 3
+  puts "Three"
+end
+
+o puede hacerse esto: 
+age = 18
+
+case age
+when 1, 2, 3
+  puts "Little baby"
+when 4, 5
+  puts "Child"
+else
+  puts "Not a baby"
+end
+
+// Rangos. Permite imprimir un rango de numero o cadena sin utilizar un ciclo. 
+
+a = (1..7).to_a
+puts a # [1, 2, 3, 4, 5, 6, 7]
+
+age = 42
+
+case age
+when 0..14
+  puts "Child"
+when 15..24
+  puts "Youth"
+when 25..64
+  puts "Adult"
+else
+  puts "Senior"
+end
+
+// For Loops. Se manejan varios casos. 
+
+1) for i in (1..10)
+  puts i
+end
+
+2)  for i in 1..5
+  break if i > 3
+  puts i
+end
+
+3) for i in 0..10
+  next if i %2 == 0
+  puts i
+end
+
+4) x = 0
+loop do
+  puts x
+  x += 1
+  break if x > 10
+end
+
+// Array, declaracion. Un array en Ruby puede incluir cualquier tipo de dato. 
+
+items = ["Apple", "Orange", "Banana"]
+
+arr = [5, "Dave", 15.88, false]
+
+puts arr[0] # 5
+puts arr[1] # "Dave"
+puts arr[-1] # false
+
+- Agregar Elemento a un array 
+
+arr << 8 o arr.push(8)
+puts arr
+
+- Agregar Elemento a un array en una posicion
+
+arr.insert(2, 8) - primer parametro(posicion) & segundo paremtro(dato a ingresar)
+
+- Eliminar elemento de un array
+
+arr = [1, 2, 3]
+arr.pop
+print arr
+# [1, 2]
+
+- Eliminar elemento de un array en una posicion
+
+arr = [2, 4, 6, 8]
+arr.delete_at(2)
+print arr
+# [2, 4, 8]
+
+- Imprimir un rango de posiciones en un array
+
+nums = [6, 3, 8, 7, 9]
+print nums[1..3]
+# [3, 8, 7]
+
+// Combinacion de arrays 
+
+- Union 
+a = [1, 2, 3]
+b = [4, 5]
+
+res = a + b
+print res # [1, 2, 3, 4, 5]
+
+- Interseccion
+a = [1, 2, 3, 4, 5]
+b = [2, 4, 5, 6]
+
+res = a - b
+print res #[1, 3]
+
+- Retornar un array con numeros repetidos
+a = [2, 3, 7, 8]
+b = [2, 7, 9]
+
+print a & b # [2, 7]
+
+- Retornar un array que remueva los duplicados 
+a = [2, 3, 7, 8]
+b = [2, 7, 9]
+
+print a | b # [2, 3, 7, 8, 9]
+
+- Hacer un array al reves. 
+arr = [5, 3, 8]
+res = arr.reverse
+print res # [8, 3, 5]
+
+- Hacerlo al reves permanente
+arr = [1, 2, 3]
+print arr.reverse!
+
+// Metodos Array
+
+array.length or array.size retorna el numero de elementos de un arreglo
+array.sort Regresa un arreglo con los elementos ordenados
+array.uniq retorna un arreglo con los valores dublicados eliminados del arreglo
+array.uniq! Elimina los duplicados en el mismo arreglo
+array.freeze Asegura que el arreglo. Este no pdra ser modicado
+array.include?(obj) Retorna True si obj esta presente en el arreglo, false si es lo contrario
+array.min Retorna el elemento de menor valor
+array.max Retorna el elemento de mayor valor
+
+- Iteracion en Array
+arr = ["a", "b", "c"]
+for x in arr
+  puts "Value: #{x}"
+end
