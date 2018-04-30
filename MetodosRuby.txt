@@ -111,10 +111,16 @@ arr.pop
 print arr
 # [1, 2]
 
+- Mirar ultimo elemento de un array
+
+Arr.last
+
+
+
 - Eliminar elemento de un array en una posicion
 
 arr = [2, 4, 6, 8]
-arr.delete_at(2)
+arr.delete_at(2) o arr.shift() o arr.shift(2)
 print arr
 # [2, 4, 8]
 
@@ -170,7 +176,11 @@ array.uniq! Elimina los duplicados en el mismo arreglo
 array.freeze Asegura que el arreglo. Este no pdra ser modicado
 array.include?(obj) Retorna True si obj esta presente en el arreglo, false si es lo contrario
 array.min Retorna el elemento de menor valor
-array.max Retorna el elemento de mayor valor
+array.max Retorna el elemento de mayor valor.
+array.squeeze elimina caracteres muy repetidos de un string.
+array.permutation.to_a regresa un array con todas las combinaciones posibles
+
+
 
 - Iteracion en Array
 arr = ["a", "b", "c"]
@@ -197,6 +207,10 @@ end
 
 text = "I am learning Ruby and it is fun!"
 text.downcase!
+text.upcase
+text.swapcase invierte el tamaño de las letras de un string
+text.capitalize cambia a mayuscula  la primera letra del texto
+
 
 // Nombrar metodos
 def say
